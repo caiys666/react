@@ -4,6 +4,7 @@ import './App.less'
 // import Github from './components/github/github.jsx'
 // import Pubsub from './components/pubsub/pubsub.jsx'
 import Spa from './components/Spa/Spa.jsx'
+// import MyNavLink from './pages/index/index'
 
 function App() {
   return (
