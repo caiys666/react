@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Redirect, Route, Switch } from 'react-router-dom'
 import MyNavLink from '../myNavLink/index'
 import Home from './home/index'
 import About from './about/index'
@@ -18,8 +18,11 @@ export default class Spa extends Component {
           </div>
           <div className="spa-router-content">
             {/** 注册路由 */}
-            <Route path="/about" component={About}></Route>
-            <Route path="/home" component={Home}></Route>
+            <Switch>
+              <Route path="/about" component={About}></Route>
+              <Route path="/home" component={Home}></Route>
+              <Redirect to="/about" />
+            </Switch>
           </div>
         </div>
       </div>
